@@ -3,7 +3,7 @@ const { Post } = require("../../models/");
 const withAuth = require("../../utils/auth");
 
 
-
+//create a new post 
 router.post("/", withAuth, async (req, res) => {
   const body = req.body;
 
@@ -18,6 +18,8 @@ router.post("/", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//update post 
 
 router.put("/:id", withAuth, async (req, res) => {
   try {
@@ -36,6 +38,9 @@ router.put("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+//delete post 
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {

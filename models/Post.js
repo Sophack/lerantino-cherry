@@ -13,6 +13,7 @@ Post.init(
         },
         title: {
             type: DataTypes.STRING,
+            body: DataTypes.STRING,
             allowNull: false,
         },
         user_text: {
@@ -35,6 +36,7 @@ Post.init(
     {
         sequelize,
         freezeTableName: true,
+        timstamps: false,
         underscored: true,
         modelName: 'post'
     }
